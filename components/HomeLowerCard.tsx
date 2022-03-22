@@ -14,7 +14,7 @@ const HomeLowerCard = ({ mdsrc, smsrc, title, description }: ImageProps) => {
         <div className="font-Roboto relative">
             <img src={mdsrc} className="w-full h-full hidden md:inline" />
             <img src={smsrc} alt="" className="w-full h-full md:hidden" />
-            <div className="grid place-items-start absolute md:bottom-0 md:my-5 mx-10 text-xl md:text-white">
+            <div className="grid place-items-start absolute md:bottom-0 md:my-5 md:mx-10 text-xl md:text-white">
 
                 <h1 className="font-extrabold md:text-7xl text-6xl -tracking-wide">
                     {title}
