@@ -1,84 +1,36 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import HeaderComponents from '../components/Header'
+import HomeCard from '../components/HomeCard'
+import HomeLowerCard from '../components/HomeLowerCard'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="md:max-w-6xl md:mx-auto font-Roboto relative md:p-0 px-2">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          Nike. Just Do It. Nike IN
+        </title>
+        {/* add favison */}
+        <link rel="shortcut icon" href="/Nike_Swoosh_Logo_Black_original.jpg" />
       </Head>
+      <section className='border'>
+        <HeaderComponents />
+      </section>
+      <main className='border'>
+        {/* home page images */}
+        <HomeCard mdsrc={'https://static.nike.com/a/images/f_auto/dpr_1.5,cs_srgb/w_1156,c_limit/9064fe24-7ac5-4baa-a7ee-8d15bb3a11ba/nike-just-do-it.png'} smsrc={'https://static.nike.com/a/images/f_auto/dpr_1.9,cs_srgb/h_449,c_limit/d60ccff6-d464-4cbd-83fe-3558a4b9bf4a/nike-just-do-it.png'} description={'The future is in the Air'} title={'NIKE AIR MAX INTRLK'} />
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
+        {/*// todo: best of nike */}
+        <HomeCard mdsrc={'https://static.nike.com/a/images/f_auto/dpr_1.5,cs_srgb/w_1156,c_limit/8c8b2373-f031-4bec-92e0-7bf551dd4654/nike-just-do-it.png'} smsrc={'https://static.nike.com/a/images/f_auto/dpr_1.9,cs_srgb/w_336,c_limit/40df83c8-2804-46b8-a931-3345710a0f3f/nike-just-do-it.png'} description={'The future is in the Air'} title={'NIKE AIR MAX 90 SE'} />
+        {/*//todo: the latest products */}
+        {/* Lated produts */}
+        <h1 className="text-2xl my-5">
+          The Latest 
         </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <HomeLowerCard smsrc={'https://static.nike.com/a/images/f_auto/dpr_1.9,cs_srgb/h_500,c_limit/2fdaa992-ee57-42f9-b44a-a8b5d7a8c41b/nike-just-do-it.jpg'}   mdsrc={'https://static.nike.com/a/images/f_auto/dpr_1.5,cs_srgb/w_1156,c_limit/dda2ca46-97d5-4268-a921-289a4a7f62d7/nike-just-do-it.jpg'} description={"Classic touch. Fresh Designs."} title={'NEW STYLES'}/>
       </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
     </div>
   )
 }
